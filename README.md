@@ -68,7 +68,7 @@ AttritionRate = SUM(HR_Analytics[AttritionCount])/SUM(HR_Analytics[EmployeeCount
 ### Results
 
 1. The total Head count is (1,470).
-2. Total Attrition count (238) & Attrition rate (16.2%).
+2. Total Attrition count (237) & Attrition rate (16.1%).
 3. Average age (37yrs).
 4. Average salary (6.5k).
 5. Average years spent (7.0yrs).
