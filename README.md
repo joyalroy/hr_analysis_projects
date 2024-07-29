@@ -21,68 +21,60 @@ The HR Analysis project aims to provide comprehensive insights into HR data. Thi
 
 ### Data Sources
 
-Hr Data: The primary dataset used for analysis in this project contains various HR metrics.[Uploading HR_Analytics.csv…]()
+Hr Data: The primary dataset used for analysis in this project contains various HR metrics.
 
-(Dataset Source:[HR_Analytics.csv](https://github.com/user-attachments/files/16417990/HR_Analytics.csv)
+Dataset Source: [HR_Analytics.csv](https://github.com/user-attachments/files/16417990/HR_Analytics.csv)
+
 File Format: CSV
  
 ### Tools
 
-- Microsoft Excel Workbok :- Data Cleaning, Data Analysis & Data Visualization.
+- Microsoft Power BI :- Data Cleaning, Data Analysis & Data Visualization.
 
 ### Data Cleaning
 
 In the initial data preparation phase, the following tasks were performed.
 
 1. Data loading & inspection.
-2. Handling missing values.
+2. Handling missing values/null values.
 3. Data cleaning & formatting.
 
 ### Exploratory Data Analysis
 
-EDA involved exploring the sales data to answer key questions, such as;
+EDA involved exploring the HR data to answer KPI's, such as;
 
-- In which month was the highest sales produced?
-- Who made the most purchases- men or women?
-- What are different order status?
-- List top 5 states contributing to the sales?
-- Which channel is contributing to maximum sales?
-- Which is the highest selling category?
-- Compare the sales and orders.
-- Relation between age and gender based on number of orders.
+- What is the total number of employees in the organization?
+- Find the overall attrition and attrition rate.
+- Evaluate the average age of personnel in the organization.
+- Calculate the average salary of personnel in the organization.
+- Figure out the average employment period.
 
 ### Data Analysis
 
 include some interesting code/features worked with
 
-```excel
+```power bi
 
-#NewColumn
+#Conditional Column
 
-=IF(E2>=50,"Senior",IF(E2>=30,"Adult","Teenager"))
+Column Name:AttritionCount, Operator:Equals, Value:Yes, Output:1, Else:0
 
-#New Column
+#New Measure
 
-=TEXT(G2,"mmm")
+AttritionRate = SUM(HR_Analytics[AttritionCount])/SUM(HR_Analytics[EmployeeCount])
+
 ```
 
 ### Results
 
-1. Month of March had the most peak sales(1.9M).
-2. Women are more likely to buy compared to men(~65%).
-3. Maharashtra, Karnataka & Uttar Pradesh are the top 3 states(~35%).
-4. Adult age group (30-49yrs) is max contributing (~50%).
-5. Amazon, Flipkart & Myntra channels are max contributing(~80%).
-
-### Recommendations
-
-- Target women customers of age group (30-49yrs) living in Maharashtra, Karnataka & Uttar Pradesh by showing ads/offers/coupons available on Amazon, Flipkart & Myntra.
-
-### Limitations
-
-- I had to create new columns to classify age-groups and distinguish sales on monthly basis to generate meaningful insights & data precision.
+1. The total Head count is (1,470).
+2. Total Attrition count (238) & Attrition rate (16.2%).
+3. Average age (37yrs).
+4. Average salary (6.5k).
+5. Average years spent (7.0yrs).
 
 ### References
 
 - Google
 - Youtube
+- Credits:Rishabh Mishra
